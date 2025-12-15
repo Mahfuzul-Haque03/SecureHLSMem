@@ -1,0 +1,4 @@
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/home/rubel/Documents/secureHLSMem/baseline_logs/scanbuild/bench_gemm_gemm_buggy_oob_write.c_reports/2025-12-14-220916-3675184-1' because it contains no reports.
+scan-build: No bugs found.

@@ -1,0 +1,8 @@
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/rubel/Documents/secureHLSMem/bench/pointer/null_deref_buggy.c:16:18: warning: Array access (from variable 'local') results in a null pointer dereference [core.NullDereference]
+        local[i] = (float)i;
+        ~~~~~    ^
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /home/rubel/Documents/secureHLSMem/baseline_logs/scanbuild/bench_pointer_null_deref_buggy.c_reports/2025-12-14-220915-3675091-1' to examine bug reports.

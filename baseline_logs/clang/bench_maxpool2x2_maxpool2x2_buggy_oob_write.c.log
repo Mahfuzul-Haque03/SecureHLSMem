@@ -1,0 +1,4 @@
+/home/rubel/Documents/secureHLSMem/bench/maxpool2x2/maxpool2x2_buggy_oob_write.c:14:9: warning: unused variable 'out_h' [-Wunused-variable]
+    int out_h = height / 2;
+        ^
+1 warning generated.

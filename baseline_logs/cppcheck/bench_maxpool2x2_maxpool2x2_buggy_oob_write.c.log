@@ -1,0 +1,3 @@
+Checking /home/rubel/Documents/secureHLSMem/bench/maxpool2x2/maxpool2x2_buggy_oob_write.c ...
+unreadVariable::/home/rubel/Documents/secureHLSMem/bench/maxpool2x2/maxpool2x2_buggy_oob_write.c::14::Variable 'out_h' is assigned a value that is never used.
+missingIncludeSystem::nofile::0::Cppcheck cannot find all the include files (use --check-config for details)

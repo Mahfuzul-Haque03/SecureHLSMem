@@ -1,0 +1,8 @@
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/rubel/Documents/secureHLSMem/bench/maxpool2x2/maxpool2x2_buggy_oob_write.c:14:9: warning: Value stored to 'out_h' during its initialization is never read [deadcode.DeadStores]
+    int out_h = height / 2;
+        ^~~~~   ~~~~~~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /home/rubel/Documents/secureHLSMem/baseline_logs/scanbuild/bench_maxpool2x2_maxpool2x2_buggy_oob_write.c_reports/2025-12-14-220914-3675050-1' to examine bug reports.

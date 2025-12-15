@@ -1,0 +1,106 @@
+{
+  "benchmarks": [
+    {
+      "id": "fir_safe",
+      "file": "bench/fir/fir_safe.c",
+      "function": "fir_safe",
+      "bugs": []
+    },
+    {
+      "id": "fir_buggy",
+      "file": "bench/fir/fir_buggy_oob_read.c",
+      "function": "fir_buggy_oob_read",
+      "bugs": [
+        {
+          "type": "OOB_READ",
+          "line": 22,
+          "bug_type": "OOB_READ"
+        }
+      ]
+    },
+    {
+      "id": "gemm_safe",
+      "file": "bench/gemm/gemm_safe.c",
+      "function": "gemm_safe",
+      "bugs": []
+    },
+    {
+      "id": "gemm_buggy",
+      "file": "bench/gemm/gemm_buggy_oob_write.c",
+      "function": "gemm_buggy_oob_write",
+      "bugs": [
+        {
+          "type": "OOB_WRITE",
+          "line": 27,
+          "bug_type": "OOB_WRITE"
+        }
+      ]
+    },
+    {
+      "id": "conv2d_safe",
+      "file": "bench/conv2d/conv2d_safe.c",
+      "function": "conv2d_safe",
+      "bugs": []
+    },
+    {
+      "id": "conv2d_buggy",
+      "file": "bench/conv2d/conv2d_buggy_oob_read.c",
+      "function": "conv2d_buggy_oob_read",
+      "bugs": [
+        {
+          "type": "OOB_READ",
+          "line": 27,
+          "bug_type": "OOB_READ"
+        }
+      ]
+    },
+    {
+      "id": "maxpool2x2_safe",
+      "file": "bench/maxpool2x2/maxpool2x2_safe.c",
+      "function": "maxpool2x2_safe",
+      "bugs": []
+    },
+    {
+      "id": "maxpool2x2_buggy",
+      "file": "bench/maxpool2x2/maxpool2x2_buggy_oob_write.c",
+      "function": "maxpool2x2_buggy_oob_write",
+      "bugs": [
+        {
+          "type": "OOB_WRITE",
+          "line": 42,
+          "bug_type": "OOB_WRITE"
+        }
+      ]
+    },
+    {
+      "id": "pointer_region_safe",
+      "file": "bench/pointer/pointer_region_safe.c",
+      "function": "pointer_region_safe",
+      "bugs": []
+    },
+    {
+      "id": "pointer_region_buggy",
+      "file": "bench/pointer/pointer_region_buggy_oob_write.c",
+      "function": "pointer_region_buggy_oob_write",
+      "bugs": [
+        {
+          "type": "OOB_WRITE",
+          "line": 14,
+          "bug_type": "OOB_WRITE"
+        }
+      ]
+    },
+    {
+      "id": "null_deref_buggy",
+      "file": "bench/pointer/null_deref_buggy.c",
+      "function": "null_deref_buggy",
+      "bugs": [
+        {
+          "type": "NULL_DEREF",
+          "line": 16,
+          "bug_type": "NULL_DEREF"
+        }
+      ]
+    }
+  ]
+}

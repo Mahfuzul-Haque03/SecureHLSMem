@@ -1,0 +1,110 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rubel' on host 'dell-PT-3620' (Linux_x86_64 version 6.8.0-87-generic) on Mon Dec 15 00:26:47 CST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/rubel/Documents/secureHLSMem'
+Sourcing Tcl script 'bench/pointer/pointer_region_safe.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_pointer_region_safe 
+INFO: [HLS 200-10] Creating and opening project '/home/rubel/Documents/secureHLSMem/proj_pointer_region_safe'.
+INFO: [HLS 200-1510] Running: set_top pointer_region_safe 
+INFO: [HLS 200-1510] Running: add_files /home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c 
+INFO: [HLS 200-10] Adding design file '/home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe_tb.c 
+INFO: [HLS 200-10] Adding test bench file '/home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe_tb.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/rubel/Documents/secureHLSMem/proj_pointer_region_safe/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.33 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.33ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.458 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.74 seconds. CPU system time: 0.48 seconds. Elapsed time: 0.73 seconds; current allocated memory: 460.688 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.18 seconds. CPU system time: 0.37 seconds. Elapsed time: 3.55 seconds; current allocated memory: 461.000 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 461.000 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 461.641 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 461.711 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_11_1' (/home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c:11) in function 'pointer_region_safe' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 482.227 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 482.227 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pointer_region_safe' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pointer_region_safe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_11_1'
+WARNING: [HLS 200-871] Estimated clock period (3.32ns) exceeds the target (target clock period: 3.33ns, clock uncertainty: 0.8991ns, effective delay budget: 2.4309ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'pointer_region_safe' consists of the following:	'alloca' operation ('i') [3]  (0 ns)
+	'load' operation ('i', /home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c:11) on local variable 'i' [13]  (0 ns)
+	'sitofp' operation ('conv', /home/rubel/Documents/secureHLSMem/bench/pointer/pointer_region_safe.c:12) [20]  (3.32 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 482.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 482.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pointer_region_safe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pointer_region_safe/buffer_r' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pointer_region_safe/len' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pointer_region_safe' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pointer_region_safe' pipeline 'VITIS_LOOP_11_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_7_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pointer_region_safe'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 482.227 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 482.227 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 482.227 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for pointer_region_safe.
+INFO: [VLOG 209-307] Generating Verilog RTL for pointer_region_safe.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 301.20 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.88 seconds. CPU system time: 0.91 seconds. Elapsed time: 5.32 seconds; current allocated memory: -1010.773 MB.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../bench/pointer/pointer_region_safe_tb.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rubel' on host 'dell-PT-3620' (Linux_x86_64 version 6.8.0-87-generic) on Mon Dec 15 00:26:56 CST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/rubel/Documents/secureHLSMem/proj_pointer_region_safe/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rubel/38261771765780016417906
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.27 seconds. Total CPU system time: 0.17 seconds. Total elapsed time: 7.47 seconds; peak allocated memory: 19.355 MB.
+   Compiling(apcc) ../../../../bench/pointer/pointer_region_safe.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'rubel' on host 'dell-PT-3620' (Linux_x86_64 version 6.8.0-87-generic) on Mon Dec 15 00:27:05 CST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/rubel/Documents/secureHLSMem/proj_pointer_region_safe/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_rubel/38263741765780025421449
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.5 seconds. Total CPU system time: 0.2 seconds. Total elapsed time: 7.73 seconds; peak allocated memory: 19.336 MB.
+   Generating csim.exe
+Calling pointer_region_safe...
+CSIM PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 18.1 seconds. CPU system time: 0.74 seconds. Elapsed time: 18.65 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 26.1 seconds. Total CPU system time: 2.34 seconds. Total elapsed time: 26.16 seconds; peak allocated memory: 1.458 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Dec 15 00:27:13 2025...
