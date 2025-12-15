@@ -40,6 +40,20 @@ int *x = NULL;
 
 ---
 
+### 4. Vulnerability Classifications
+These vulnerabilities fall under well-known Common Weakness Enumerations (CWE), often grouped as "Memory Safety Violations":
+
+| Category | CWE ID | Description |
+| :--- | :---: | :--- |
+| **OOB Write** | [CWE-787](https://cwe.mitre.org/data/definitions/787.html) | Writing past the end of a buffer |
+| **OOB Read** | [CWE-125](https://cwe.mitre.org/data/definitions/125.html) | Reading past the end of a buffer |
+| **NULL Deref** | [CWE-476](https://cwe.mitre.org/data/definitions/476.html) | Accessing memory via a NULL pointer |
+| **Use After Free** | [CWE-416](https://cwe.mitre.org/data/definitions/416.html) | Referencing memory after it has been freed |
+| **Double Free** | [CWE-415](https://cwe.mitre.org/data/definitions/415.html) | Freeing the same memory address twice |
+| **Uninitialized Use**| [CWE-457](https://cwe.mitre.org/data/definitions/457.html) | Using a variable that has not been initialized |
+
+---
+
 ## The Problem: "Silent Corruption" in Vitis HLS
 
 Our experiments demonstrate that current industry-standard HLS flows offer **zero protection** against these bugs.
@@ -53,6 +67,8 @@ We created a benchmark suite of 6 kernels containing seeded OOB and NULL errors.
 ---
 
 ## The Solution: secureHLSMem
+
+We developed **secureHLSMem** specifically to defend against these "classic low-level foot-guns" which roam free in HLS designs. Unlike general input-validation tools, secureHLSMem focuses on preserving the integrity of the accelerator's memory space.
 
 We propose and implement a modular defense mechanism with two core components:
 
@@ -126,6 +142,13 @@ We synthesized the secure kernels to measure the overhead of the BCU logic.
 If you use `secureHLSMem` in your research, please cite:
 
 > **Md Rubel Ahmed, M Shifat Hossain, et al.**, "secureHLSMem: A Modular Defense Framework for Memory Safety in HLS Accelerators," [Conference/Journal Name], 2025.
+
+## References
+
+1.  **CWE-787**: "Out-of-bounds Write". MITRE Common Weakness Enumeration. https://cwe.mitre.org/data/definitions/787.html
+2.  **CWE-476**: "NULL Pointer Dereference". MITRE Common Weakness Enumeration. https://cwe.mitre.org/data/definitions/476.html
+3.  **Serebryany, K., et al.**, "AddressSanitizer: A Fast Address Sanity Checker," USENIX ATC, 2012. (Inspiration for Dynamic BCU)
+4.  **Cong, J., et al.**, "High-Level Synthesis for FPGAs: From Prototyping to Deployment," IEEE TCAD, 2011.
 
 ---
 
