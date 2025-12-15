@@ -114,6 +114,9 @@ We synthesized the secure kernels to measure the overhead of the BCU logic.
 | **GEMM** | 996 | 1032 | **~3.6%** |
 | **MaxPool** | 204 | 209 | **~2.5%** |
 
+
+![Resource Usage Comparison](vitis_resources.png)
+
 **Conclusion:** `secureHLSMem` provides complete safety coverage with negligible hardware cost (<5%).
 
 ---
