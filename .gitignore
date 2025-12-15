@@ -1,0 +1,25 @@
+# HLS Build Artifacts
+*.log
+*.jou
+*.str
+*.app
+*.aps
+*.dir/
+proj_*/
+solution*/
+
+# Compilation Artifacts
+*.o
+main_test_runner
+
+# Logs and Reports
+baseline_logs/
+vitis_hls.log
+
+# Python
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/

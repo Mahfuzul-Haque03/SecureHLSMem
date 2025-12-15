@@ -1,4 +1,4 @@
-# secureHLSMem: Memory Safety for High-Level Synthesis Accelerators
+# SecureHLSMem: A Unified Memory-Safety Enforcement Framework for High-Level Synthesis of Accelerators
 
 **secureHLSMem** is a modular defense framework designed to detect and mitigate memory safety vulnerabilities in C/C++ kernels used for High-Level Synthesis (HLS). It targets the critical gap where standard HLS tools (like Vitis HLS) prioritize performance over safety, allowing dangerous "silent corruption" bugs to pass through simulation and synthesis into deployed hardware.
 
