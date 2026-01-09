@@ -143,8 +143,19 @@ We synthesized the secure kernels to measure the overhead of the BCU logic.
 ## Citation
 
 If you use `secureHLSMem` in your research, please cite:
-
-> **Md Rubel Ahmed, M Shifat Hossain, et al.**, "secureHLSMem: A Modular Defense Framework for Memory Safety in HLS Accelerators," [Conference/Journal Name], 2025.
+```
+@misc{securehlsmem,
+  author = {Gazi, Md Mahfuzul Haque and
+            Hossain, M. Shifat and
+            Hussain, Arif and
+            Jha, Sumit Kumar and
+            Ahmed, Md Rubel},
+  title  = {SecureHLSMem: Synthesizable Memory Safety for High-Level Synthesis of Accelerators},
+  year   = {2025},
+  howpublished = {\url{https://github.com/RubelAhmed57/SecureHLSMem}},
+  note   = {Open-source research artifact}
+}
+```
 
 ## References
 
@@ -154,5 +165,3 @@ If you use `secureHLSMem` in your research, please cite:
 4.  **Cong, J., et al.**, "High-Level Synthesis for FPGAs: From Prototyping to Deployment," IEEE TCAD, 2011.
 
 ---
-
-**Authors:** Md Rubel Ahmed, M Shifat Hossain
